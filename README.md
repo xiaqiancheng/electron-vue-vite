@@ -56,3 +56,16 @@ export default {
 
 - [C/C++ addons, Node.js modules - Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling)
 - [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron-renderer#dependencies-vs-devdependencies)
+
+## electron安装失败
+打开npm的配置文件
+```
+npm config edit
+```
+在空白处将下面几个配置添加上去,注意如果有原有的这几项配置，就修改
+```
+registry=https://registry.npmmirror.com
+electron_mirror=https://cdn.npmmirror.com/binaries/electron/
+electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
+
+```
